@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprinhas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            margin: 0;
+            padding: 20px;
+            color: #000000;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/773/449/desktop-wallpaper-rich-aesthetic-rich-woman.jpg'); /* Nova imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5; 
+            z-index: -1; 
+        }
+        h1, h2 {
+            color: #000000; 
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 250px;
+        }
+        button {
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #000000; 
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #ffffff;
+            color: #333;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+        #totalPrice {
+            font-size: 18px;
+            margin-top: 15px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrinho de Compras</h1>
+
+    <div>
+        <input type="text" id="productSearch" placeholder="Qual seu desejo?">
+        <button onclick="addToCart()">Preencha seu carrinho com amor</button>
+    </div>
+
+    <h2>Lista de desejos</h2>
+    <ul id="productList"></ul>
+
+    <h2>Bolsinha de ouro</h2>
+    <ul id="cartList"></ul>
+    <p id="totalPrice">Total: R$ 0,00</p>
+
+    <button onclick="ordenarCarrinho()">Precinho para o luxo</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
